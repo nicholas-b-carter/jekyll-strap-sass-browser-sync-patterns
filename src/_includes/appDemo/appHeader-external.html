@@ -1,0 +1,19 @@
+<header class="bcbsm-header bcbsm-header--external">
+    <div class="bcbsm-header__top">
+        <div class="container {% if include.fluid %}container--fluid{% endif %} bcbsm-header">
+            <div class="bcbsm-header__top__logo bcbsm-logo-svg"></div>
+            <ul class="bcbsm-header__top__links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bcbsm-header__middle">
+        <div class="container {% if include.fluid %}container--fluid{% endif %}">
+            <a id="main" tabindex="-1"></a>
+            <!-- <h1 class="bcbsm-header__middle__title">{{include.title}}</h1> -->
+            <h1 class="h2 bcbsm-header__middle__title"><small>{{ include.pgTitle }}</small>{{ include.subTitle }}</h1>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,229 @@
+---
+title: "Customize search results"
+layout: null
+preview: true
+---
+{% include appDemo/app-head.html bodyClass="search-results" title="Search" fluid="true" %}
+
+<div class="skipLinks alert-info">
+    <a class="sr-only focusable" href="#search">Skip to search</a>
+    <a class="sr-only focusable" href="#searchResults">Skip to search results</a>
+    <a class="sr-only focusable" href="#filters">Skip to search results filters</a>
+</div>
+{% include appDemo/appHeader.html %}
+
+<main class="wrapper container-fluid container--full">
+    <div class="row-grid">
+        {% include appDemo/search-pane-left.html %}
+        <div class="pane-center col">
+            <div class="panel--page panel panel-default">
+                <a tabindex="-1" id="search"></a>
+                <div class="header keyline-bottom">
+                    <form role="form" class="padding-top-2 padding-right-2 padding-bottom-2">
+                        <h2 class="margin-top-0">Find applications</h2>
+                        <div class="input-search input-group">
+                            <input type="text" aria-label="Search all fields" title="Search all fields" class="form-control" placeholder="Search all fields" id="txt-find">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary"><i class="icon icon-inverse icon-search"></i></button>
+                            </span>
+                        </div>
+                        <div style="margin-bottom: 0;" class="help-block">
+                            <a href="#void">Show advanced search</a>
+                        </div>
+                    </form>
+                    <div class="tabs-results tabs-responsive btn-group hide">
+                        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="btn btn-default dropdown-toggle hide" type="button">
+                            All<span class="badge">100</span> <span class="caret"></span>
+                        </button>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" role="tab" href="#"><span>All</span><span class="badge">100</span></a></li>
+                            <li><a role="tab" data-toggle="tab" href="#"><span>Unassigned</span><span class="badge">45</span></a></li>
+                            <li><a role="tab" data-toggle="tab" href="#"><span>Partially assigned</span><span class="badge">34</span></a></li>
+                            <li><a role="tab" data-toggle="tab" href="#"><span>Fully assigned</span><span class="badge">3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-wrapper row-grid">
+                    <div class="app-sidebar filters keyline-right">
+                        <a tabindex="-1" id="filters"></a>
+                        <div class="close-sidebar keyline-bottom clearfix">
+                            <button class="btn-closeSidebar pull-right btn btn-sm btn-default btn-hover"><i class="icon icon-angle-double-left"></i> Close</button>
+                        </div>
+                        <div class="filter-heading">
+                            <span tabindex="0" class="h4">Refine by</span> <a class="filters-clear" href="">Clear</a>
+                        </div>
+                        {% include appDemo/filters-accordion.html %}
+                        {% include appDemo/filters-flat.html %}
+                    </div>
+                    <div class="row-grid">
+                        <div class="main-content col">
+                            <div class="panel-body">
+                                <div class="results-header">
+                                    <a tabindex="-1" id="searchResults"></a>
+                                    <a href="#void" class="link-sidebar"><i class="icon icon-columns"></i>Refine</a>
+                                    <div class="pg-actions clearfix">
+                                        <h3 class="h4 pull-left margin-top-0"><span style="font-weight: 400">100 results for </span>application</h3>
+                                        <div class="btn-pgActions btn-group">
+                                            <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="btn-pgActions">Actions <span class="caret"></span></button>
+                                            <ul aria-labelledby="btn-pgActions" class="dropdown-menu">
+                                                <li role="presentation"><a href="#">Print</a></li>
+                                                <li class="divider" role="separator"></li>
+                                                <li role="presentation"><a href="#">Download Excel</a></li>
+                                                <li role="presentation"><a href="#">Download CSV</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="list-keywords list-unstyled margin-bottom-0">
+                                        <li tabindex="0" class="filter-value"><span>Application type: Service</span> <i class="icon icon-close icon-muted"></i></li>
+                                        <li tabindex="0" class="filter-value"><span>Applicant: JANE LLC</span> <i class="icon icon-close icon-muted"></i></li>
+                                    </ul>
+                                </div>
+                                {% include appDemo/table-searchResults.html %} {% include appDemo/table-bordered.html %}
+                                <div class="text-center">
+                                    <div class="pager btn-group">
+                                        <a disabled="" href="#" class="btn btn-default"><i class="icon icon-angle-left"></i></a>
+                                        <a href="#" class="btn btn-default active">1</a>
+                                        <a href="#" class="btn btn-default">2</a>
+                                        <a href="#" class="btn btn-default">3</a>
+                                        <a href="#" class="btn btn-default">4</a>
+                                        <a href="#" class="btn btn-default">5</a>
+                                        <a href="#" class="btn btn-default"><i class="icon icon-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% include appDemo/aside-collections.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include appDemo/search-pane-right.html %}
+    </div>
+    {% include appDemo/modal-appSettings.html %} 
+    {% include appDemo/search-config-ui.html %}
+</main>
+
+
+    
+
+
+
+<script src="{{site.baseurl}}/generated/scripts/vendor.js"></script>
+<script src="{{site.baseurl}}/generated/scripts/plugins.js"></script>
+<script src="{{site.baseurl}}/generated/scripts/appDemo.js"></script>
+<script>
+var windowWidth = $(window).width();
+
+// resize window only if width changes
+$(window).resize(function() {
+    if ($(window).width() !== windowWidth) {
+
+        windowWidth = $(window).width();
+
+        $('.app-sidebar').removeClass('open');
+        $('.btn-pgActions, .btn-displayOpts, .pager').removeClass('hide');
+    }
+});
+
+
+// toggle Collections aside display
+$('.btn-collections')
+    .removeClass('hide')
+    .click(function() {
+        $('.collections').toggleClass('hide');
+        $('#chk-collections').prop('checked', $('.collections').is(':visible'));
+    });
+
+// events for Collections panel
+$('.panel--collections')
+    .on('click', '.link-appNumSearch', function(e){ 
+        var appNum = $(this).find('.appNum').text();
+        console.log(appNum);
+        e.preventDefault();
+
+        $('#txt-search, #txt-find').val(appNum);
+    })
+    .on('click', '.close', function(e){         
+        e.preventDefault();
+
+        $('.collections').addClass('hide');
+         $('#chk-collections').prop('checked', false);
+    })
+    .on('click', '[data-toggle="collapsible"]', function(e){         
+        var trigger = $(this),
+            target = trigger.attr('href'),
+            expanded = trigger.attr('aria-expanded') === 'true';
+        
+        e.preventDefault();
+        trigger.attr('aria-expanded', !expanded).find('.icon').toggleClass('icon-plus-square-o icon-minus-square-o');
+        $(target).find('tr').toggleClass('hide').attr('aria-hidden', expanded);
+    });
+
+// initialize tooltip for table cols toggle
+$('.btn-tblCols').tooltip({
+    placement: 'top',
+    template: '<div class="tooltip tooltip-light" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+});
+
+// enable datepickers 
+$('.datepicker').datepicker({
+    // autoSize: true,
+    // showButtonPanel: true,
+    numberOfMonths: 1,
+    showOtherMonths: true
+    // changeMonth: true,
+    // changeYear: true
+});
+
+// toggle filters sidebar
+$('.link-sidebar').click(function(e) {
+    e.preventDefault();
+    $('.app-sidebar').toggleClass('open');
+    $('.btn-pgActions, .btn-displayOpts, .pager').toggleClass('hide');
+});
+
+// hide filters sidebar
+$('.btn-closeSidebar').click(function(e) {
+    e.preventDefault();
+    $('.app-sidebar').removeClass('open');
+    $('.btn-pgActions, .btn-displayOpts, .pager').removeClass('hide');
+});
+
+// toggle UI configurator
+$('.config-ui')
+    .on('click', '.toggle', function() {
+        $('.config-ui').toggleClass('open');
+    });
+
+// toggle switches for UI widgets
+$('.switch')
+    .on('click', 'input[type="checkbox"]:not(.js-chkPanels)', function() {
+        var attr = '.' + $(this).attr('data-target');
+        
+        $(attr).toggleClass('hide');        
+    })
+     .on('click', '#chk-leftPane, #chk-rightPane', function() {
+        var attr = '.' + $(this).attr('data-target');
+        
+        $(attr).toggleClass('open');        
+    })
+    .on('click', 'input[name="tblsSwitch"]', function() {
+        var attr = '.' + $(this).attr('data-target');
+        
+        $('.js-tableSwitch').addClass('hide');
+        $(attr).toggleClass('hide');        
+    })
+    .on('click', 'input[name="filtersSwitch"]', function() {
+        var attr = '.' + $(this).attr('data-target');
+        
+        $('.js-filterSwitch').addClass('hide');
+        $(attr).toggleClass('hide');        
+    });
+    
+</script>
+</body>
+
+</html>
+
+
+

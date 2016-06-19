@@ -1,0 +1,77 @@
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: BCBSM Pattern Library
+description: A Bootstrap-SASS Pattern Library
+url: https://nicholas-b-carter.github.io/jekyll-strap-sass-browser-sync-patterns/
+
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: .tmp/src
+destination: .tmp/dist
+exclude: ['assets']
+
+# Same as the title etc for your site but can instead be
+# called by using 'site.author.name' and so on
+# NOTE: Don't use @ in front of your Twitter username
+author:
+  name: Nicholas Carter
+  email: nicholas.b.carter@gmail.com
+  uri: https://nicholas-b-carter.github.io/jekyll-strap-sass-browser-sync-patterns/
+  bio: web development enthusiast
+  twitter:
+  github:
+
+# Jekyll will exclude these files during compilation
+exclude:
+  - CONTRIBUTING.md
+  - README.md
+  - todo.md
+  - front
+  - node_modules
+  - bower_components
+  - bcbsm
+  - bower.json
+  - package.json
+  - .sass-cache
+  - report.xml
+
+# Markdown parsing configuration
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  parse_block_html: true
+
+# All links in the design library will start with this baseurl
+baseurl: ""
+
+# The url for the home page of the design library
+homeurl: ""
+
+# Set the default layout for everything in the docs folder to _layouts/pattern.html
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: "pattern"
+  - scope:
+      path: "docs/guides"
+    values:
+      layout: "guide"
+
+# The list of all versions, which are referenced on the home page
+versions:
+  - name: 1.0.0
+    url: docs
+
+# The categories for the side navigation. These correspond to the folders under the /docs folder
+doctypes:
+  - foundation
+  - components
+  - patterns
+  - inspiration
+
+guidetypes:
+  - project
+  - research
+  - requirements
+  - design
+  - evaluation

@@ -1,0 +1,35 @@
+{
+  "name": "BCBSMPatternLibrary",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nicholas-b-carter/BCBSMPatternLibrary.git"
+  },
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "jquery.inputmask": "~3.1.26",
+    "font-awesome": "~4.2.0",
+    "bootstrap-sass": "^3.3.6",
+    "select2": "~3.5.1",
+    "nouislider": "~7.0.10",
+    "bootstrap-timepicker": "^0.5.2"
+  },
+  "main": [
+    "bcbsm/sass/bcbsm.scss"
+  ],
+  "ignore": [
+    "**/.*",
+    "docs",
+    "downloads",
+    "resources",
+    "front",
+    "_layouts",
+    "_includes",
+    "gulpfile.js",
+    "_config*",
+    "howto.md",
+    "index.html",
+    "todo.md",
+    "report.xml"
+  ]
+}
