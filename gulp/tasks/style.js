@@ -11,6 +11,7 @@ const autoprefixer = require('autoprefixer');
 const gzip = require('gulp-gzip');
 const rev = require('gulp-rev');
 const argv = require('yargs').argv;
+const reload = require('browser-sync').reload;
 
 // 'gulp styles' -- creates a CSS file from your SASS, adds prefixes and
 // creates a Sourcemap
@@ -36,10 +37,12 @@ gulp.task('styles', () =>
     .pipe(when(argv.prod, rev()))
     .pipe(when(!argv.prod, sourcemaps.write('.')))
     .pipe(when(argv.prod, gulp.dest('.tmp/assets/stylesheets')))
+    .pipe(when(argv.prod, reload({stream:true})))
     .pipe(when(argv.prod, when('*.css', gzip({append: true}))))
     .pipe(when(argv.prod, size({
       gzip: true,
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
+    .pipe(reload({stream:true}))
 );
