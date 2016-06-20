@@ -24,16 +24,15 @@ author:
 exclude:
   - CONTRIBUTING.md
   - README.md
-  - src/front
+  - todo.md
+  - front
   - node_modules
   - bower_components
-  - src/bcbsm
+  - bcbsm
   - bower.json
   - package.json
-  - .publish
-  - .tmp
-  - gulp
-  - src
+  - .sass-cache
+  - report.xml
 
 # Markdown parsing configuration
 markdown: kramdown
@@ -72,7 +71,7 @@ version: 1.0.0
 # The list of all versions, which are referenced on the home page
 versions:
   - name: 1.0.0
-    url: /docs
+    url: docs
 
 # The categories for the side navigation. These correspond to the folders under the /docs folder
 doctypes:
