@@ -2,4 +2,3 @@
 # Overrides these options in _config.yml
 
 # All links in the design library will start with this baseurl
-baseurl: "jekyll-strap-sass-browser-sync-patterns"

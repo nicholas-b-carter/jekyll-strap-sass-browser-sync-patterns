@@ -24,15 +24,16 @@ author:
 exclude:
   - CONTRIBUTING.md
   - README.md
-  - todo.md
-  - front
+  - src/front
   - node_modules
   - bower_components
-  - bcbsm
+  - src/bcbsm
   - bower.json
   - package.json
-  - .sass-cache
-  - report.xml
+  - .publish
+  - .tmp
+  - gulp
+  - src
 
 # Markdown parsing configuration
 markdown: kramdown
@@ -41,10 +42,18 @@ kramdown:
   parse_block_html: true
 
 # All links in the design library will start with this baseurl
-baseurl: "http://localhost:3000"
+baseurl: "/jekyll-strap-sass-browser-sync-patterns"
 
 # The url for the home page of the design library
-homeurl: ""
+homeurl: "/jekyll-strap-sass-browser-sync-patterns"
+
+# All email links will use this variable
+email: nicholas.b.carter@gmail.com?subject=BCBSM UI Design Library
+
+# Repository information, which is used for links like "View on Github"
+repository:
+  name: nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns
+  url: https://github.com/nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns
 
 # Set the default layout for everything in the docs folder to _layouts/pattern.html
 defaults:
@@ -57,10 +66,13 @@ defaults:
     values:
       layout: "guide"
 
+# The latest stable version
+version: 1.0.0
+
 # The list of all versions, which are referenced on the home page
 versions:
   - name: 1.0.0
-    url: docs
+    url: /jekyll-strap-sass-browser-sync-patterns/docs
 
 # The categories for the side navigation. These correspond to the folders under the /docs folder
 doctypes:

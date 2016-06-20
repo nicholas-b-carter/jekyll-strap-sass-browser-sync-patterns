@@ -775,9 +775,9 @@ These examples show various form configurations.
         </div>
       </div>
       <div class="form-group has-error">
-        <label class="control-label required" for="em12">USPTO email address</label>
+        <label class="control-label required" for="em12">BCBSM email address</label>
         <input type="email" class="form-control" id="em12" value="john.smith@gmail.com" required aria-required="true">
-        <span class="help-block">Email must end with bcbsm.gov.</span>
+        <span class="help-block">Email must end with bcbsm.com.</span>
       </div>
       <div class="form-group has-error" >
         <label class="control-label required" for="eid12">Employee ID</label> <a href="#" class="pull-right">Find my Employee ID</a>
@@ -863,7 +863,7 @@ These examples show various form configurations.
     </div>
   </div>
   <div class="form-group has-error">
-    <label class="control-label required" for="em12">USPTO email address</label>
+    <label class="control-label required" for="em12">BCBSM email address</label>
     <input type="email" class="form-control" id="em12" value="john.smith@gmail.com" required aria-required="true">
     <span class="help-block">Email must end with bcbsm.com.</span>
   </div>

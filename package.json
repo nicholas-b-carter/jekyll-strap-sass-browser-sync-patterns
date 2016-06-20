@@ -1,11 +1,15 @@
 {
-  "name": "bcbsm-pattern-library",
+  "name": "jekyll-strap-sass-browser-sync-patterns",
   "version": "0.0.0",
-  "description": "A Bootstrap-SASS Pattern Library",
+  "description": "A Jekyll Bootstrap-SASS BrowserSync Pattern Library",
   "homepage": "https://nicholas-b-carter.github.io/jekyll-strap-sass-browser-sync-patterns/",
   "author": {
     "name": "Nicholas Carter",
     "email": "nicholas.b.carter@gmail.com"
+  },
+  "repository": {
+    "type:": "git",
+    "url": "https://github.com/nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",

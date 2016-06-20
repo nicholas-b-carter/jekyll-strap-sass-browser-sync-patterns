@@ -1,3 +1,3 @@
 Contents:
 
-1. USPTO Axure widget library
+1. BCBSM Axure widget library

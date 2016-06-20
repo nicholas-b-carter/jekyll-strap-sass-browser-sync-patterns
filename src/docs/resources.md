@@ -42,7 +42,7 @@ layout: pattern
             <div class="col-sm-12 col-lg-12">
                 <h4 class="margin-top-0">BCBSM Axure widget library</h4>
                 <p>This library allows for rapid wireframing of interactions using the look & feel of the BCBSM pattern library. The BCBSM widget library can be used in Axure or other compatible software.</p>
-               <a href="https://github.com/nicholas-b-carter/BCBSMPatternLibrary/tree/gh-pages/resources/" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download BCBSM Axure Widget Library</a>
+               <a href="https://github.com/nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns/tree/gh-pages/resources/" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download BCBSM Axure Widget Library</a>
                 <div class="margin-top-1 small">Current release version: <strong>0.1.0</strong></div>
             </div>
         </div>

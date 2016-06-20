@@ -19,7 +19,7 @@ Templates to make usability testing easier, faster, and more consistant.
 
 ### Software Usability Survey - \(all positive version\)
 
-Post-test Satisfaction questionnaire. Mandatory for use during all USPTO usability testing. This is a .doc formatted version for printing out or as guidance for creating versions using other mediums.
+Post-test Satisfaction questionnaire. Mandatory for use during all BCBSM usability testing. This is a .doc formatted version for printing out or as guidance for creating versions using other mediums.
 
 <a href="../downloads/PostTestSurvey-SUS.docx"><i class="icon icon-file-word-o" style="margin-right: 5px"></i>PostTestSurvey-SUS.docx</a>
 

@@ -61,7 +61,7 @@ title: "Icons"
 <div class="pl-pattern">
 {::nomarkdown}<div class="pull-right"><span class="label label-info">Proposed</span></div>{:/nomarkdown}
 
-### USPTO Intellectual Property Symbols
+### BCBSM Intellectual Property Symbols
 
 {::nomarkdown}
 <div class="row pl-icon-list-large sec-ip-symbols">

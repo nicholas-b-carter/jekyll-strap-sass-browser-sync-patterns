@@ -1,9 +1,9 @@
 {
-  "name": "BCBSMPatternLibrary",
+  "name": "jekyll-strap-sass-browser-sync-patterns",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nicholas-b-carter/BCBSMPatternLibrary.git"
+    "url": "https://github.com/nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns.git"
   },
   "dependencies": {
     "jquery": "~1.11.0",
@@ -18,18 +18,15 @@
     "bcbsm/sass/bcbsm.scss"
   ],
   "ignore": [
+    ".*/",
     "**/.*",
-    "docs",
-    "downloads",
-    "resources",
-    "front",
-    "_layouts",
-    "_includes",
-    "gulpfile.js",
+    "src/",
+    "dist/",
+    "gulp/",
     "_config*",
-    "howto.md",
-    "index.html",
-    "todo.md",
-    "report.xml"
+    "Gemfile",
+    "Gemfile.lock",
+    "gulpfile.js",
+    "README.md"
   ]
 }
