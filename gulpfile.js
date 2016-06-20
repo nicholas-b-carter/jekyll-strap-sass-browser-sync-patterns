@@ -25,6 +25,7 @@ gulp.task('clean', gulp.parallel('clean:assets', 'clean:gzip', 'clean:dist', 'cl
 
 // 'gulp build' -- same as 'gulp' but doesn't serve your site in your browser
 // 'gulp build --prod' -- same as above but with production settings
+// 'gulp build --gitpages' -- same as above but with github-pages settings
 gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html'));
 
 // You can also just use 'gulp upload' but this way you can see all the main

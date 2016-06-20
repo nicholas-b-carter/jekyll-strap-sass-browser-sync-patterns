@@ -15,8 +15,11 @@ gulp.task('site:tmp', () =>
 // 'gulp jekyll' -- builds your site with development settings
 // 'gulp jekyll --prod' -- builds your site with production settings
 gulp.task('site', done => {
-  if (!argv.prod) {
+  if (!argv.prod && !argv.gitpages) {
     shell.exec('jekyll build');
+    done();
+  } else if (argv.gitpages && !argv.prod){
+    shell.exec('jekyll build --config config.yml,_config.build.gitpages.yml')
     done();
   } else if (argv.prod) {
     shell.exec('jekyll build --config _config.yml,_config.build.yml');
