@@ -21,7 +21,7 @@ gulp.task('site', done => {
     shell.exec('jekyll build');
     done();
   } else if (argv.gitpages && !argv.prod){
-    shell.exec('jekyll build --config _config.yml,_config.build.gitpages.yml')
+    shell.exec('jekyll build --config _config.yml,_config.build.gitpages.yml');
     done();
   } else if (argv.prod) {
     shell.exec('jekyll build --config _config.yml,_config.build.prod.yml');
