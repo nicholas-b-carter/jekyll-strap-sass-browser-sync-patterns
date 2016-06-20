@@ -7,7 +7,7 @@ Before proceeding with the UI Design Library, we are assuming that you are alrea
 ### Usage
 
 #### Download UI Design Library
-Download the latest version of UI Design Library [here](http://nicholas-b-carter.github.io/BCBSMPatternLibrary/docs/resources.html).
+Download the latest version of UI Design Library [here](http://nicholas-b-carter.github.io/jekyll-strap-sass-browser-sync-patterns/docs/resources.html).
 
 ![download-bcbsm](https://raw.githubusercontent.com/USPTO/designpatterns/gh-pages/resources/tut-resources/ui-intro.png)
 
