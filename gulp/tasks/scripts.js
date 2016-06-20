@@ -20,7 +20,6 @@ gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
-    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     'bower_components/jquery/dist/jquery.js',
     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
@@ -30,6 +29,8 @@ gulp.task('scripts', () =>
     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
     'bower_components/select2/select2.js',
     'bower_components/nouislider/distribute/jquery.nouislider.all.min.js',
+    'bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js',
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     'src/front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
     'src/front/scripts/appDemo.js',
     'src/front/scripts/main.js'
