@@ -9,7 +9,7 @@ layout: pattern
             <div class="col-sm-6 col-lg-6">
                 <h4 class="margin-top-0">Download CSS/SASS</h4>
                 <p>This zip file includes the source SASS files and minified CSS. The compiled CSS file includes a themed and extended version of Bootstrap. The SASS files pull in the Bootstrap source at compilation time.</p>
-                <a href="{{site.baseurl}}/downloads/bcbsm-{{site.version}}.zip" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download v{{site.version}}</a>
+                <a href="{{site.baseurl}}/assets/downloads/bcbsm.zip" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download v{{site.version}}</a>
                 <div class="margin-top-1 small">Looking for older releases? Find them <a href="{{site.repository.url}}/releases">here.</a></div>
             </div>
             <div class="col-sm-6 col-lg-6">
@@ -42,7 +42,7 @@ layout: pattern
             <div class="col-sm-12 col-lg-12">
                 <h4 class="margin-top-0">BCBSM Axure widget library</h4>
                 <p>This library allows for rapid wireframing of interactions using the look & feel of the BCBSM pattern library. The BCBSM widget library can be used in Axure or other compatible software.</p>
-               <a href="https://github.com/nicholas-b-carter/jekyll-strap-sass-browser-sync-patterns/tree/gh-pages/resources/" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download BCBSM Axure Widget Library</a>
+               <a href="{{site.baseurl}}/dist/resources/prototyping/BCBSM-Widget-Library.rplib" class="btn btn-primary"><i class="icon icon-inverse icon-download"></i> &nbsp;Download BCBSM Axure Widget Library</a>
                 <div class="margin-top-1 small">Current release version: <strong>0.1.0</strong></div>
             </div>
         </div>

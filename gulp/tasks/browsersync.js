@@ -20,7 +20,7 @@ gulp.task('serve', (done) => {
   // Watch various files for changes and do the needful
   gulp.watch(['src/**/*.md', 'src/**/*.html', 'src/**/*.yml'], gulp.series('build:site', reload));
   gulp.watch(['src/**/*.xml', 'src/**/*.txt'], gulp.series('site', reload));
-  gulp.watch('src/assets/javascript/**/*.js', gulp.series('scripts', reload));
-  gulp.watch('src/assets/scss/**/*.scss', gulp.series('styles', reload));
-  gulp.watch('src/assets/images/**/*', gulp.series('images', reload));
+  gulp.watch('src/**/*.js', gulp.series('scripts', reload));
+  gulp.watch('src/**/*.scss', gulp.series('styles', reload));
+  gulp.watch(['src/bcbsm/images/**/*', 'src/front/images/**/*'], gulp.series('images', reload));
 });

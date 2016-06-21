@@ -10,7 +10,7 @@ const tasks = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-lin
 gulp.task('inject', gulp.parallel('inject:head', 'inject:footer'));
 
 // 'gulp build:site' -- copies, builds, and then copies it again
-gulp.task('build:site', gulp.series('site:tmp', 'inject', 'site', 'copy:site'));
+gulp.task('build:site', gulp.series('site:tmp', 'inject', 'site', 'zip:site', 'copy:site'));
 
 // 'gulp assets' -- cleans out your assets and rebuilds them
 // 'gulp assets --prod' -- cleans out your assets and rebuilds them with

@@ -1,8 +1,10 @@
 'use strict';
 const gulp = require('gulp');
 const shell = require('shelljs');
+const zip = require('gulp-zip');
 const size = require('gulp-size');
 const argv = require('yargs').argv;
+const yaml = require('node-yaml');
 
 // 'gulp jekyll:tmp' -- copies your Jekyll site to a temporary directory
 // to be processed
@@ -12,10 +14,16 @@ gulp.task('site:tmp', () =>
     .pipe(size({title: 'Jekyll'}))
 );
 
+// 'gulp zip:site' -- zip's BCBSM assets/site.
+gulp.task('zip:site', () =>
+  gulp.src(['.tmp/assets/**/*', '.tmp/src/bcbsm/**/*', '!.tmp/src/bcbsm/images'])
+    .pipe(zip('bcbsm.zip'))
+    .pipe(gulp.dest('.tmp/assets/downloads'))
+);
+
 // 'gulp jekyll' -- builds your site with development settings
 // 'gulp jekyll --prod' -- builds your site with production settings
 // 'gulp jekyll --gitpages' -- builds your site with github-pages settings
-
 gulp.task('site', done => {
   if (!argv.prod && !argv.gitpages) {
     shell.exec('jekyll build');
