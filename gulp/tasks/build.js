@@ -4,7 +4,6 @@ const shell = require('shelljs');
 const zip = require('gulp-zip');
 const size = require('gulp-size');
 const argv = require('yargs').argv;
-const yaml = require('node-yaml');
 
 // 'gulp jekyll:tmp' -- copies your Jekyll site to a temporary directory
 // to be processed
